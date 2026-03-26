@@ -23,3 +23,5 @@ Built with a user-friendly interface for easy input and analysis
 ✔ Practical application for precision agriculture
 
 📊 This project reflects my interest in Data Science, Machine Learning, and real-world problem solving, especially in the agriculture domain.
+<img width="414" height="601" alt="image" src="https://github.com/user-attachments/assets/944a5639-17f3-4eb0-9ca1-8691eb705437" />
+
