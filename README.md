@@ -13,6 +13,8 @@ Based on these inputs, the model provides accurate crop recommendations, helping
 
 
 <img width="229" height="454" alt="Screenshot 2026-03-23 180411" src="https://github.com/user-attachments/assets/eae7dbf9-6c44-4777-a44d-6c014c6d6376" />
+<img width="616" height="401" alt="Screenshot 2026-03-23 174815" src="https://github.com/user-attachments/assets/ea8acce0-c6a3-4e2b-9b63-e9ef17435180" />
+
 
 
 
