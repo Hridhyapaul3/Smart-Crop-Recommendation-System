@@ -40,5 +40,7 @@ Built with a user-friendly interface for easy input and analysis
 
 <img width="1472" height="742" alt="Screenshot 2026-03-26 172043" src="https://github.com/user-attachments/assets/958eb60a-74bc-4386-ae6e-764f55a2eee4" />
 <img width="1316" height="646" alt="image" src="https://github.com/user-attachments/assets/b88e1d71-61d7-4368-a754-fc504adf6117" />
+<img width="1836" height="840" alt="image" src="https://github.com/user-attachments/assets/98f13e01-4642-42ed-a08b-fda9b4f24dab" />
+
 
 
