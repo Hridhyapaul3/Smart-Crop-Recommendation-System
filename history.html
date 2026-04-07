@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prediction History</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0fff4;
+      padding: 2rem 1rem;
+      color: #2d3748;
+    }
+    .container { max-width: 960px; margin: 0 auto; }
+    h1 { color: #276749; margin-bottom: 1.5rem; font-size: 1.8rem; }
+    .back { color: #276749; text-decoration: none; font-size:.9rem;
+            border: 1px solid #276749; border-radius:20px; padding:4px 14px;
+            display:inline-block; margin-bottom:1.5rem; }
+    .back:hover { background:#276749; color:#fff; }
+    .card { background:#fff; border-radius:14px; padding:1.5rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,.07); overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; font-size:.9rem; }
+    th { background:#276749; color:#fff; padding:.7rem 1rem; text-align:left; white-space:nowrap; }
+    td { padding:.65rem 1rem; border-bottom:1px solid #e2e8f0; white-space:nowrap; }
+    tr:hover td { background:#f0fff4; }
+    .badge {
+      display:inline-block; padding:3px 12px; border-radius:999px;
+      background:#c6f6d5; color:#276749; font-weight:600; font-size:.82rem;
+    }
+    .empty { text-align:center; color:#888; padding:3rem; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <a href="/" class="back">← Back to Predictor</a>
+  <h1>📋 Prediction History</h1>
+
+  <div class="card">
+    {% if records %}
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Date &amp; Time</th>
+          <th>N</th><th>P</th><th>K</th>
+          <th>Temp (°C)</th><th>Humidity (%)</th>
+          <th>pH</th><th>Rainfall (mm)</th>
+          <th>Crop</th>
+          <th>Confidence</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in records %}
+        <tr>
+          <td>{{ r.id }}</td>
+          <td>{{ r.timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+          <td>{{ r.N }}</td>
+          <td>{{ r.P }}</td>
+          <td>{{ r.K }}</td>
+          <td>{{ r.temperature }}</td>
+          <td>{{ r.humidity }}</td>
+          <td>{{ r.ph }}</td>
+          <td>{{ r.rainfall }}</td>
+          <td><span class="badge">{{ r.result }}</span></td>
+          <td>{{ r.confidence }}%</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <div class="empty">No predictions yet. Make your first prediction!</div>
+    {% endif %}
+  </div>
+</div>
+</body>
+</html>
